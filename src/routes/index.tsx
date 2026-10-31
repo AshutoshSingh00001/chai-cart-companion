@@ -2,11 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   ArrowUp, Mic, Plus, MessageCircle, SlidersHorizontal, Lock, Plug, Brain, Bell,
-  ShieldCheck, Wallet, Truck, Clock, Sparkles as _s, Check,
+  ShieldCheck, Wallet, Truck, Clock, Check,
 } from "lucide-react";
 import integrations from "@/data/integrations.json";
 
-void _s;
 
 export const Route = createFileRoute("/")({
   head: () => ({
