@@ -1,0 +1,642 @@
+[
+ {
+  "name": "Google Workspace",
+  "apps": [
+   {
+    "name": "Gmail",
+    "slug": "gmail",
+    "desc": "Read inbox, fetch OTPs, search messages, draft & send emails",
+    "domain": "mail.google.com"
+   },
+   {
+    "name": "Google Calendar",
+    "slug": "googlecalendar",
+    "desc": "Schedule meetings, check free/busy slots, create Meet events",
+    "domain": "calendar.google.com"
+   },
+   {
+    "name": "Google Drive",
+    "slug": "googledrive",
+    "desc": "Search, create folders, upload and organize files & PDFs",
+    "domain": "drive.google.com"
+   },
+   {
+    "name": "Google Docs",
+    "slug": "googledocs",
+    "desc": "Create and append to documents, notes, and transcripts",
+    "domain": "docs.google.com"
+   },
+   {
+    "name": "Google Sheets",
+    "slug": "googlesheets",
+    "desc": "Read rows, append data, update spreadsheets and tables",
+    "domain": "sheets.google.com"
+   },
+   {
+    "name": "Google Meet",
+    "slug": "googlemeet",
+    "desc": "Generate conference links, schedule calls and meeting rooms",
+    "domain": "meet.google.com"
+   },
+   {
+    "name": "Google Tasks",
+    "slug": "googletasks",
+    "desc": "Create to-dos, checklists, and sync task lists",
+    "domain": "tasks.google.com"
+   },
+   {
+    "name": "YouTube",
+    "slug": "youtube",
+    "desc": "Search videos, fetch channel stats, read playlists",
+    "domain": "youtube.com"
+   },
+   {
+    "name": "Google Contacts",
+    "slug": "googlecontacts",
+    "desc": "Look up contacts, phone numbers, and addresses",
+    "domain": "contacts.google.com"
+   },
+   {
+    "name": "Google Forms",
+    "slug": "googleforms",
+    "desc": "Inspect form responses and survey submissions",
+    "domain": "forms.google.com"
+   },
+   {
+    "name": "Google Slides",
+    "slug": "googlesides",
+    "desc": "Create and update presentations and slide decks",
+    "domain": "slides.google.com"
+   }
+  ]
+ },
+ {
+  "name": "Developer Platforms & AI",
+  "apps": [
+   {
+    "name": "GitHub",
+    "slug": "github",
+    "desc": "Search code, view repos, create issues & PRs, create gists",
+    "domain": "github.com"
+   },
+   {
+    "name": "GitLab",
+    "slug": "gitlab",
+    "desc": "Manage merge requests, issues, pipelines, and repositories",
+    "domain": "gitlab.com"
+   },
+   {
+    "name": "Bitbucket",
+    "slug": "bitbucket",
+    "desc": "Workspace repositories, pull requests, and commit logs",
+    "domain": "bitbucket.com"
+   },
+   {
+    "name": "Vercel",
+    "slug": "vercel",
+    "desc": "Monitor deployments, view build logs, inspect project domains",
+    "domain": "vercel.com"
+   },
+   {
+    "name": "Sentry",
+    "slug": "sentry",
+    "desc": "Track error events, stack traces, and issue alerts",
+    "domain": "sentry.com"
+   },
+   {
+    "name": "Supabase",
+    "slug": "supabase",
+    "desc": "Database queries, auth management, storage buckets",
+    "domain": "supabase.com"
+   },
+   {
+    "name": "PagerDuty",
+    "slug": "pagerduty",
+    "desc": "Trigger and acknowledge incidents, manage on-call alerts",
+    "domain": "pagerduty.com"
+   },
+   {
+    "name": "Human Approval (HITL)",
+    "slug": "hitl",
+    "desc": "High-assurance human approval gates before executing critical tools",
+    "domain": ""
+   },
+   {
+    "name": "Perplexity AI",
+    "slug": "perplexityai",
+    "desc": "Live web search and grounded research queries",
+    "domain": "perplexity.ai"
+   },
+   {
+    "name": "OpenAI",
+    "slug": "openai",
+    "desc": "External completions and embedding generation",
+    "domain": "openai.com"
+   },
+   {
+    "name": "Gemini",
+    "slug": "gemini",
+    "desc": "Multimodal image, document, and video intelligence",
+    "domain": "gemini.google.com"
+   }
+  ]
+ },
+ {
+  "name": "Communication & Messaging",
+  "apps": [
+   {
+    "name": "Slack",
+    "slug": "slack",
+    "desc": "Read channel messages, send bot announcements, direct message users",
+    "domain": "slack.com"
+   },
+   {
+    "name": "Discord",
+    "slug": "discord",
+    "desc": "Send guild messages, webhook posts, and manage server channels",
+    "domain": "discord.com"
+   },
+   {
+    "name": "Telegram Bot API",
+    "slug": "telegram",
+    "desc": "Send direct Telegram messages, photos, and files",
+    "domain": "telegram.org"
+   },
+   {
+    "name": "Microsoft Teams",
+    "slug": "microsoft_teams",
+    "desc": "Post channel messages, manage chats and meetings",
+    "domain": "teams.microsoft.com"
+   },
+   {
+    "name": "Zoom",
+    "slug": "zoom",
+    "desc": "Schedule meetings, fetch recordings, list participants",
+    "domain": "zoom.com"
+   },
+   {
+    "name": "WhatsApp Business",
+    "slug": "whatsapp",
+    "desc": "Send template notifications and customer chat messages",
+    "domain": "whatsapp.com"
+   },
+   {
+    "name": "Loom",
+    "slug": "loom",
+    "desc": "Fetch video recordings, transcribe walkthroughs, share links",
+    "domain": "loom.com"
+   },
+   {
+    "name": "Msg91",
+    "slug": "msg91",
+    "desc": "Transactional SMS delivery and OTP verification routes",
+    "domain": "msg91.com"
+   },
+   {
+    "name": "Wati",
+    "slug": "wati",
+    "desc": "WhatsApp CRM broadcasts and customer support messages",
+    "domain": "wati.io"
+   },
+   {
+    "name": "Google Chat",
+    "slug": "google_chat",
+    "desc": "Workspace space messages and interactive card webhooks",
+    "domain": "chat.google.com"
+   },
+   {
+    "name": "Zoho Mail",
+    "slug": "zoho_mail",
+    "desc": "Corporate email reading, composing, and folder management",
+    "domain": "zoho.com"
+   }
+  ]
+ },
+ {
+  "name": "Productivity & Utilities",
+  "apps": [
+   {
+    "name": "Notion",
+    "slug": "notion",
+    "desc": "Query databases, create pages, update documentation",
+    "domain": "notion.com"
+   },
+   {
+    "name": "Airtable",
+    "slug": "airtable",
+    "desc": "Manage bases, filter views, insert and update records",
+    "domain": "airtable.com"
+   },
+   {
+    "name": "Confluence",
+    "slug": "confluence",
+    "desc": "Search team wikis, create knowledge base spaces",
+    "domain": "atlassian.com"
+   },
+   {
+    "name": "Calendly",
+    "slug": "calendly",
+    "desc": "Check booking links, list scheduled appointments",
+    "domain": "calendly.com"
+   },
+   {
+    "name": "Todoist",
+    "slug": "todoist",
+    "desc": "Organize daily tasks, set priorities and due dates",
+    "domain": "todoist.com"
+   },
+   {
+    "name": "Dropbox",
+    "slug": "dropbox",
+    "desc": "Cloud file storage, folder syncing, and shared links",
+    "domain": "dropbox.com"
+   },
+   {
+    "name": "Box",
+    "slug": "box",
+    "desc": "Enterprise cloud content management and file access",
+    "domain": "box.com"
+   },
+   {
+    "name": "Miro",
+    "slug": "miro",
+    "desc": "Digital whiteboard diagrams, sticky notes, and brainstorming canvases",
+    "domain": "miro.com"
+   },
+   {
+    "name": "Outlook",
+    "slug": "outlook",
+    "desc": "Microsoft 365 calendar and email sync",
+    "domain": "outlook.com"
+   },
+   {
+    "name": "OneDrive",
+    "slug": "one_drive",
+    "desc": "Microsoft cloud file storage and folder shares",
+    "domain": "onedrive.com"
+   },
+   {
+    "name": "Excel",
+    "slug": "excel",
+    "desc": "Microsoft 365 workbook calculation and sheet tables",
+    "domain": "excel.com"
+   },
+   {
+    "name": "Microsoft Word",
+    "slug": "microsoft_word",
+    "desc": "Word processing documents and reports",
+    "domain": "microsoftword.com"
+   },
+   {
+    "name": "Microsoft PowerPoint",
+    "slug": "microsoft_powerpoint",
+    "desc": "Presentation deck creation",
+    "domain": "microsoftpowerpoint.com"
+   },
+   {
+    "name": "Google Maps",
+    "slug": "google_maps",
+    "desc": "Place search, directions, commute estimates, geocoding",
+    "domain": "googlemaps.com"
+   },
+   {
+    "name": "OpenWeather API",
+    "slug": "openweather_api",
+    "desc": "Current weather forecasts and alerts",
+    "domain": "openweatherapi.com"
+   },
+   {
+    "name": "Tripadvisor",
+    "slug": "tripadvisor",
+    "desc": "Hotel, attraction, and restaurant reviews",
+    "domain": "tripadvisor.com"
+   },
+   {
+    "name": "AccuWeather",
+    "slug": "accu_weather",
+    "desc": "Local weather radar and hourly precipitation forecasts",
+    "domain": "accuweather.com"
+   },
+   {
+    "name": "IQAir AirVisual",
+    "slug": "iqair_airvisual",
+    "desc": "Real-time Air Quality Index (AQI) and PM2.5 monitoring",
+    "domain": "iqairairvisual.com"
+   },
+   {
+    "name": "iLovePDF",
+    "slug": "i_love_pdf",
+    "desc": "PDF merging, compression, and format conversion",
+    "domain": "ilovepdf.com"
+   },
+   {
+    "name": "Zoho Calendar",
+    "slug": "zoho_calendar",
+    "desc": "Corporate event scheduling and reminders",
+    "domain": "zohocalendar.com"
+   }
+  ]
+ },
+ {
+  "name": "Project Management",
+  "apps": [
+   {
+    "name": "Linear",
+    "slug": "linear",
+    "desc": "Create issues, update sprint cycles, manage engineering roadmaps",
+    "domain": "linear.com"
+   },
+   {
+    "name": "Jira Software",
+    "slug": "jira",
+    "desc": "Agile boards, backlogs, epics, bug tracking",
+    "domain": "atlassian.com"
+   },
+   {
+    "name": "Asana",
+    "slug": "asana",
+    "desc": "Task workflows, project boards, and team milestone tracking",
+    "domain": "asana.com"
+   },
+   {
+    "name": "Trello",
+    "slug": "trello",
+    "desc": "Kanban boards, task lists, and checklist cards",
+    "domain": "trello.com"
+   },
+   {
+    "name": "ClickUp",
+    "slug": "clickup",
+    "desc": "Workspaces, task time tracking, and custom statuses",
+    "domain": "clickup.com"
+   },
+   {
+    "name": "Monday.com",
+    "slug": "monday",
+    "desc": "Work management boards, item status automation",
+    "domain": "monday.com"
+   }
+  ]
+ },
+ {
+  "name": "CRM & Customer Support",
+  "apps": [
+   {
+    "name": "HubSpot CRM",
+    "slug": "hubspot",
+    "desc": "Contacts, deals, companies, and marketing pipeline",
+    "domain": "hubspot.com"
+   },
+   {
+    "name": "Salesforce",
+    "slug": "salesforce",
+    "desc": "Lead capture, opportunity tracking, customer records",
+    "domain": "salesforce.com"
+   },
+   {
+    "name": "Pipedrive",
+    "slug": "pipedrive",
+    "desc": "Sales pipeline stages, deal activities, customer contacts",
+    "domain": "pipedrive.com"
+   },
+   {
+    "name": "Zendesk",
+    "slug": "zendesk",
+    "desc": "Support tickets, user requests, customer satisfaction ratings",
+    "domain": "zendesk.com"
+   },
+   {
+    "name": "Intercom",
+    "slug": "intercom",
+    "desc": "In-app customer conversations, user profiles, help desk tickets",
+    "domain": "intercom.com"
+   },
+   {
+    "name": "Attio CRM",
+    "slug": "attio",
+    "desc": "Next-generation relationship tracking and custom record schemas",
+    "domain": "attio.com"
+   },
+   {
+    "name": "Zoho",
+    "slug": "zoho",
+    "desc": "Suite-wide CRM contacts and organizational modules",
+    "domain": "zoho.com"
+   },
+   {
+    "name": "Zoho Desk",
+    "slug": "zoho_desk",
+    "desc": "Customer support ticket routing and knowledge base",
+    "domain": "zohodesk.com"
+   },
+   {
+    "name": "Zoho Bigin",
+    "slug": "zoho_bigin",
+    "desc": "Small-business pipeline CRM",
+    "domain": "zohobigin.com"
+   },
+   {
+    "name": "Freshdesk",
+    "slug": "freshdesk",
+    "desc": "Omnichannel customer service ticketing",
+    "domain": "freshdesk.com"
+   },
+   {
+    "name": "Freshsales",
+    "slug": "freshsales",
+    "desc": "Sales pipeline and deal tracking",
+    "domain": "freshsales.com"
+   }
+  ]
+ },
+ {
+  "name": "Media & Social Platforms",
+  "apps": [
+   {
+    "name": "X (Twitter)",
+    "slug": "twitter",
+    "desc": "Post tweets, search timelines, monitor mentions",
+    "domain": "twitter.com"
+   },
+   {
+    "name": "LinkedIn",
+    "slug": "linkedin",
+    "desc": "Share professional posts, articles, and monitor network updates",
+    "domain": "linkedin.com"
+   },
+   {
+    "name": "Reddit",
+    "slug": "reddit",
+    "desc": "Search subreddits, read comments, post links",
+    "domain": "reddit.com"
+   },
+   {
+    "name": "Instagram",
+    "slug": "instagram",
+    "desc": "Media publishing and profile insights",
+    "domain": "instagram.com"
+   },
+   {
+    "name": "Spotify",
+    "slug": "spotify",
+    "desc": "Player control, search tracks, manage playlists",
+    "domain": "spotify.com"
+   },
+   {
+    "name": "Figma",
+    "slug": "figma",
+    "desc": "Inspect design files, export frame assets, view comments",
+    "domain": "figma.com"
+   },
+   {
+    "name": "Webflow",
+    "slug": "webflow",
+    "desc": "CMS collections, site publishing, and item management",
+    "domain": "webflow.com"
+   },
+   {
+    "name": "Canva",
+    "slug": "canva",
+    "desc": "Creative asset generation and design template workflows",
+    "domain": "canva.com"
+   },
+   {
+    "name": "YouTube Transcript",
+    "slug": "youtube_transcript",
+    "desc": "Extract full video transcripts and captions",
+    "domain": "youtubetranscript.com"
+   },
+   {
+    "name": "Facebook",
+    "slug": "facebook",
+    "desc": "Page posting and audience insights",
+    "domain": "facebook.com"
+   },
+   {
+    "name": "Pinterest",
+    "slug": "pinterest",
+    "desc": "Board management and visual pin bookmarking",
+    "domain": "pinterest.com"
+   }
+  ]
+ },
+ {
+  "name": "Finance, Payments & Commerce",
+  "apps": [
+   {
+    "name": "Stripe",
+    "slug": "stripe",
+    "desc": "Payment charges, customers, invoices, subscription billing",
+    "domain": "stripe.com"
+   },
+   {
+    "name": "Shopify",
+    "slug": "shopify",
+    "desc": "Store products, inventory counts, orders, customers",
+    "domain": "shopify.com"
+   },
+   {
+    "name": "Razorpay",
+    "slug": "razorpay",
+    "desc": "Payment links, order verification, UPI invoices",
+    "domain": "razorpay.com"
+   },
+   {
+    "name": "QuickBooks Online",
+    "slug": "quickbooks",
+    "desc": "Invoicing, expense tracking, accounts ledger",
+    "domain": "quickbooks.com"
+   },
+   {
+    "name": "Xero Accounting",
+    "slug": "xero",
+    "desc": "Bank reconciliation, contact invoices, expense reports",
+    "domain": "xero.com"
+   },
+   {
+    "name": "Mailchimp",
+    "slug": "mailchimp",
+    "desc": "Email newsletter campaigns and audience subscriber lists",
+    "domain": "mailchimp.com"
+   },
+   {
+    "name": "SendGrid",
+    "slug": "sendgrid",
+    "desc": "Transactional email delivery and templates",
+    "domain": "sendgrid.com"
+   },
+   {
+    "name": "Klaviyo",
+    "slug": "klaviyo",
+    "desc": "E-commerce email flows and customer segment tracking",
+    "domain": "klaviyo.com"
+   },
+   {
+    "name": "DocuSign",
+    "slug": "docusign",
+    "desc": "Digital signature envelopes and agreement tracking",
+    "domain": "docusign.com"
+   },
+   {
+    "name": "Typeform",
+    "slug": "typeform",
+    "desc": "Form response retrieval and survey analytics",
+    "domain": "typeform.com"
+   },
+   {
+    "name": "Cashfree (MCP)",
+    "slug": "cashfree_payments_mcp",
+    "desc": "Payouts, payment gateway verification, payment links",
+    "domain": "cashfreepaymentsmcp.com"
+   },
+   {
+    "name": "Splitwise",
+    "slug": "splitwise",
+    "desc": "Group expense splitting, friend balances, and settlement records",
+    "domain": "splitwise.com"
+   },
+   {
+    "name": "Zoho Books",
+    "slug": "zoho_books",
+    "desc": "Accounting, GST compliance, and billing",
+    "domain": "zohobooks.com"
+   },
+   {
+    "name": "Zoho Invoice",
+    "slug": "zoho_invoice",
+    "desc": "Client estimates, invoices, and payment receipts",
+    "domain": "zohoinvoice.com"
+   },
+   {
+    "name": "Wix",
+    "slug": "wix",
+    "desc": "Site bookings, online store products, and customer contacts",
+    "domain": "wix.com"
+   },
+   {
+    "name": "Google Merchant Center",
+    "slug": "google_merchant",
+    "desc": "E-commerce product feeds and catalog status",
+    "domain": "googlemerchant.com"
+   },
+   {
+    "name": "Zoho Inventory",
+    "slug": "zoho_inventory",
+    "desc": "Warehouse stock tracking and purchase orders",
+    "domain": "zohoinventory.com"
+   },
+   {
+    "name": "Zoho Sign",
+    "slug": "zoho_sign",
+    "desc": "Digital document signing workflows",
+    "domain": "zohosign.com"
+   },
+   {
+    "name": "ERPNext",
+    "slug": "erpnext",
+    "desc": "Open-source enterprise resource planning and stock management",
+    "domain": "erpnext.com"
+   }
+  ]
+ }
+]
