@@ -88,12 +88,12 @@
   --accent: oklch(0.93 0.045 350);
   --accent-foreground: oklch(0.42 0.14 350);
   /* Supporting accents */
-  --saffron: oklch(0.74 0.17 55);
-  --leaf: oklch(0.55 0.13 150);
+  --saffron: oklch(0.76 0.12 60);
+  --leaf: oklch(0.66 0.1 155);
   --blush: oklch(0.9 0.06 350);
-  --sky: oklch(0.58 0.13 235);
-  --violet: oklch(0.52 0.18 300);
-  --coral: oklch(0.63 0.19 25);
+  --sky: oklch(0.7 0.09 235);
+  --violet: oklch(0.66 0.11 305);
+  --coral: oklch(0.72 0.12 30);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.91 0.03 350);
