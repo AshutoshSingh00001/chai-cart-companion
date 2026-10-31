@@ -53,6 +53,7 @@
   --color-chart-5: var(--chart-5);
   --color-saffron: var(--saffron);
   --color-leaf: var(--leaf);
+  --color-blush: var(--blush);
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Instrument Serif", Georgia, serif;
   --color-sidebar: var(--sidebar);
@@ -67,42 +68,46 @@
 
 :root {
   --radius: 1rem;
-  --background: oklch(0.975 0.012 80);
-  --foreground: oklch(0.2 0.02 50);
-  --card: oklch(0.995 0.005 80);
-  --card-foreground: oklch(0.2 0.02 50);
-  --popover: oklch(0.995 0.005 80);
-  --popover-foreground: oklch(0.2 0.02 50);
-  --primary: oklch(0.2 0.02 50);
-  --primary-foreground: oklch(0.98 0.01 80);
-  --secondary: oklch(0.94 0.02 75);
-  --secondary-foreground: oklch(0.2 0.02 50);
-  --muted: oklch(0.94 0.015 75);
-  --muted-foreground: oklch(0.5 0.02 55);
-  --accent: oklch(0.7 0.18 50);
-  --accent-foreground: oklch(0.99 0.01 80);
+  /* Pastel white with a pink breath */
+  --background: oklch(0.978 0.012 355);
+  --foreground: oklch(0.28 0.06 350);
+  --card: oklch(0.995 0.006 355);
+  --card-foreground: oklch(0.28 0.06 350);
+  --popover: oklch(0.995 0.006 355);
+  --popover-foreground: oklch(0.28 0.06 350);
+  /* Windface logo pink */
+  --primary: oklch(0.62 0.25 350);
+  --primary-foreground: oklch(0.985 0.008 355);
+  --secondary: oklch(0.945 0.03 350);
+  --secondary-foreground: oklch(0.4 0.12 350);
+  --muted: oklch(0.95 0.025 350);
+  --muted-foreground: oklch(0.52 0.05 350);
+  --accent: oklch(0.93 0.045 350);
+  --accent-foreground: oklch(0.42 0.14 350);
+  /* Supporting accents */
   --saffron: oklch(0.74 0.17 55);
   --leaf: oklch(0.55 0.13 150);
+  --blush: oklch(0.9 0.06 350);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.89 0.02 75);
-  --input: oklch(0.89 0.02 75);
-  --ring: oklch(0.74 0.17 55);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
+  --border: oklch(0.91 0.03 350);
+  --input: oklch(0.91 0.03 350);
+  --ring: oklch(0.62 0.25 350);
+  --chart-1: oklch(0.62 0.25 350);
+  --chart-2: oklch(0.74 0.17 55);
+  --chart-3: oklch(0.55 0.13 150);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.97 0.01 80);
-  --sidebar-foreground: oklch(0.2 0.02 50);
-  --sidebar-primary: oklch(0.2 0.02 50);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.94 0.02 75);
-  --sidebar-accent-foreground: oklch(0.2 0.02 50);
-  --sidebar-border: oklch(0.89 0.02 75);
-  --sidebar-ring: oklch(0.74 0.17 55);
-  --gradient-hero: radial-gradient(60% 50% at 20% 30%, oklch(0.82 0.15 60 / 0.55), transparent 70%), radial-gradient(50% 45% at 85% 25%, oklch(0.75 0.14 150 / 0.35), transparent 70%), radial-gradient(70% 60% at 50% 100%, oklch(0.78 0.16 35 / 0.45), transparent 70%);
-  --shadow-composer: 0 30px 80px -30px oklch(0.45 0.12 50 / 0.45), 0 2px 0 0 oklch(1 0 0 / 0.6) inset;
+  --sidebar: oklch(0.975 0.015 355);
+  --sidebar-foreground: oklch(0.28 0.06 350);
+  --sidebar-primary: oklch(0.62 0.25 350);
+  --sidebar-primary-foreground: oklch(0.985 0.008 355);
+  --sidebar-accent: oklch(0.945 0.03 350);
+  --sidebar-accent-foreground: oklch(0.4 0.12 350);
+  --sidebar-border: oklch(0.91 0.03 350);
+  --sidebar-ring: oklch(0.62 0.25 350);
+  --gradient-hero: radial-gradient(60% 50% at 20% 30%, oklch(0.85 0.12 350 / 0.5), transparent 70%), radial-gradient(50% 45% at 85% 25%, oklch(0.88 0.08 20 / 0.35), transparent 70%), radial-gradient(70% 60% at 50% 100%, oklch(0.82 0.14 350 / 0.4), transparent 70%);
+  --shadow-composer: 0 30px 80px -30px oklch(0.62 0.25 350 / 0.4), 0 2px 0 0 oklch(1 0 0 / 0.6) inset;
 }
 
 @layer base {
