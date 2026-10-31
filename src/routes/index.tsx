@@ -54,12 +54,12 @@ const nudges = [
 ];
 
 const pillars = [
-  { icon: MessageCircle, color: "text-primary", title: "Just talk", body: "Ask in English or Hinglish. Windface opens the app, picks the item, and checks out." },
-  { icon: Wallet, color: "text-leaf", title: "UPI & COD", body: "Approve with one tap on UPI, or choose cash on delivery where the site supports it." },
-  { icon: Brain, color: "text-violet", title: "Knows your taste", body: "Memory remembers your brands, your address, your usual order — and forgets on request." },
-  { icon: Lock, color: "text-sky", title: "Protected vault", body: "Keep Aadhaar, PAN and tickets encrypted. Windface fills forms only when you allow it." },
-  { icon: SlidersHorizontal, color: "text-saffron", title: "Control centre", body: "See every site login, permission and payment. Revoke anything in a tap." },
-  { icon: Bell, color: "text-coral", title: "Nudges", body: "Set daily tasks once. Your agent runs them on time, every time." },
+  { icon: MessageCircle, tile: "bg-blush", color: "text-primary", title: "Just talk", body: "Ask in English or Hinglish. Windface opens the app, picks the item, and checks out." },
+  { icon: Wallet, tile: "bg-mint", color: "text-mint-ink", title: "UPI & COD", body: "Approve with one tap on UPI, or choose cash on delivery where the site supports it." },
+  { icon: Brain, tile: "bg-lavender", color: "text-lavender-ink", title: "Knows your taste", body: "Memory remembers your brands, your address, your usual order — and forgets on request." },
+  { icon: Lock, tile: "bg-babyblue", color: "text-babyblue-ink", title: "Protected vault", body: "Keep Aadhaar, PAN and tickets encrypted. Windface fills forms only when you allow it." },
+  { icon: SlidersHorizontal, tile: "bg-peach", color: "text-peach-ink", title: "Control centre", body: "See every site login, permission and payment. Revoke anything in a tap." },
+  { icon: Bell, tile: "bg-blush", color: "text-primary", title: "Nudges", body: "Set daily tasks once. Your agent runs them on time, every time." },
 ];
 
 function Composer() {
@@ -137,7 +137,7 @@ function Index() {
         <div className="absolute inset-0 bg-hero" />
         <div className="relative mx-auto max-w-7xl px-6 pb-24 pt-20 text-center md:pt-28">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-1.5 text-sm backdrop-blur">
-            <span className="h-2 w-2 rounded-full bg-leaf" /> Made for India · UPI & cash on delivery
+            <span className="h-2 w-2 rounded-full bg-mint-ink" /> Made for India · UPI & cash on delivery
           </span>
           <h1 className="mx-auto mt-8 max-w-4xl font-display text-6xl leading-[0.95] tracking-tight md:text-8xl">
             Say it. <em className="text-primary">Windface</em> gets it done.
@@ -174,7 +174,7 @@ function Index() {
         <div className="mt-14 grid gap-4 md:grid-cols-3">
           {pillars.map((p) => (
             <div key={p.title} className="rounded-3xl border border-border bg-card p-7 transition hover:-translate-y-1">
-              <p.icon className={`h-6 w-6 ${p.color}`} />
+              <span className={`grid h-11 w-11 place-items-center rounded-2xl ${p.tile}`}><p.icon className={`h-5 w-5 ${p.color}`} /></span>
               <h3 className="mt-5 text-xl font-bold">{p.title}</h3>
               <p className="mt-2 text-muted-foreground">{p.body}</p>
             </div>
@@ -211,7 +211,7 @@ function Index() {
       <section id="privacy" className="mx-auto max-w-7xl px-6 py-24">
         <div className="grid gap-4 md:grid-cols-3">
           <div className="rounded-3xl border border-border bg-card p-8 md:col-span-2">
-            <ShieldCheck className="h-8 w-8 text-leaf" />
+            <ShieldCheck className="h-8 w-8 text-mint-ink" />
             <h3 className="mt-6 font-display text-4xl">Your vault, your rules.</h3>
             <p className="mt-3 max-w-lg text-muted-foreground">Share Aadhaar, PAN, passport or tickets in an encrypted vault. Windface uses them to fill forms and access services — only with your say-so.</p>
             <div className="mt-6 flex flex-wrap gap-2">
@@ -221,22 +221,22 @@ function Index() {
             </div>
           </div>
           <div className="rounded-3xl border border-border bg-card p-8">
-            <Plug className="h-8 w-8 text-violet" />
+            <Plug className="h-8 w-8 text-lavender-ink" />
             <h3 className="mt-6 font-display text-4xl">Control centre</h3>
             <ul className="mt-4 space-y-3 text-sm">
               {["See every site login", "Manage memory & data", "Revoke any permission", "Payment approvals log"].map((x) => (
-                <li key={x} className="flex items-center gap-2"><Check className="h-4 w-4 text-leaf" />{x}</li>
+                <li key={x} className="flex items-center gap-2"><Check className="h-4 w-4 text-mint-ink" />{x}</li>
               ))}
             </ul>
           </div>
         </div>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="flex items-center gap-4 rounded-3xl border border-border bg-card p-6">
-            <Wallet className="h-7 w-7 text-sky" />
+            <Wallet className="h-7 w-7 text-babyblue-ink" />
             <p><span className="font-semibold">One-click UPI.</span> <span className="text-muted-foreground">Approve from GPay, PhonePe or Paytm.</span></p>
           </div>
           <div className="flex items-center gap-4 rounded-3xl border border-border bg-card p-6">
-            <Truck className="h-7 w-7 text-saffron" />
+            <Truck className="h-7 w-7 text-peach-ink" />
             <p><span className="font-semibold">Cash on delivery.</span> <span className="text-muted-foreground">Supported across multiple Indian sites.</span></p>
           </div>
         </div>
