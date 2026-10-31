@@ -5,7 +5,7 @@ import {
   ShieldCheck, Wallet, Truck, Clock, Check,
 } from "lucide-react";
 import integrations from "@/data/integrations.json";
-import windfaceLogo from "@/assets/windface-logo.png.asset.json";
+import windfaceLogo from "@/assets/windface-logo-nav.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -47,10 +47,10 @@ const suggestions = [
 ];
 
 const nudges = [
-  { time: "8:00 AM", title: "Daily milk & bread", app: "Blinkit", domain: "blinkit.com", note: "Paid via UPI · ₹84" },
-  { time: "Fri 8:30 PM", title: "Farmhouse pizza takeaway", app: "Domino's", domain: "dominos.co.in", note: "Cash on delivery" },
-  { time: "1st of month", title: "Mobile recharge ₹299", app: "JioMart", domain: "jio.com", note: "One-tap UPI" },
-  { time: "Mon 9:15 AM", title: "Cab to office", app: "Ola", domain: "olacabs.com", note: "Auto-booked" },
+  { time: "8:00 AM", title: "Daily milk & bread", app: "Blinkit", domain: "blinkit.com", note: "Paid via UPI · ₹84", chip: "bg-mint text-mint-ink" },
+  { time: "Fri 8:30 PM", title: "Farmhouse pizza takeaway", app: "Domino's", domain: "dominos.co.in", note: "Cash on delivery", chip: "bg-peach text-peach-ink" },
+  { time: "1st of month", title: "Mobile recharge ₹299", app: "JioMart", domain: "jio.com", note: "One-tap UPI", chip: "bg-babyblue text-babyblue-ink" },
+  { time: "Mon 9:15 AM", title: "Cab to office", app: "Ola", domain: "olacabs.com", note: "Auto-booked", chip: "bg-lavender text-lavender-ink" },
 ];
 
 const pillars = [
@@ -59,7 +59,7 @@ const pillars = [
   { icon: Brain, tile: "bg-lavender", color: "text-lavender-ink", title: "Knows your taste", body: "Memory remembers your brands, your address, your usual order — and forgets on request." },
   { icon: Lock, tile: "bg-babyblue", color: "text-babyblue-ink", title: "Protected vault", body: "Keep Aadhaar, PAN and tickets encrypted. Windface fills forms only when you allow it." },
   { icon: SlidersHorizontal, tile: "bg-peach", color: "text-peach-ink", title: "Control centre", body: "See every site login, permission and payment. Revoke anything in a tap." },
-  { icon: Bell, tile: "bg-blush", color: "text-primary", title: "Nudges", body: "Set daily tasks once. Your agent runs them on time, every time." },
+  { icon: Bell, tile: "bg-mint", color: "text-mint-ink", title: "Nudges", body: "Set daily tasks once. Your agent runs them on time, every time." },
 ];
 
 function Composer() {
@@ -119,7 +119,9 @@ function Index() {
       <header className="sticky top-0 z-30 border-b border-border/60 bg-background/70 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a href="/" className="flex items-center gap-2">
-            <img src={windfaceLogo.url} alt="Windface logo" className="h-9 w-9 rounded-xl object-cover" />
+            <span className="grid h-9 w-9 place-items-center overflow-hidden rounded-xl bg-lavender">
+              <img src={windfaceLogo.url} alt="Windface logo" className="h-8 w-8 object-contain" />
+            </span>
             <span className="text-lg font-bold tracking-tight">Windface</span>
           </a>
           <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
@@ -140,7 +142,7 @@ function Index() {
             <span className="h-2 w-2 rounded-full bg-mint-ink" /> Made for India · UPI & cash on delivery
           </span>
           <h1 className="mx-auto mt-8 max-w-4xl font-display text-6xl leading-[0.95] tracking-tight md:text-8xl">
-            Say it. <em className="text-primary">Windface</em> gets it done.
+            Say it. <em className="text-lavender-ink">Windface</em> gets it done.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
             One AI agent for every Indian app — groceries, trains, cabs, hotels and bills. You talk, it orders, you pay with one tap.
@@ -200,7 +202,7 @@ function Index() {
                   <p className="font-semibold">{n.title}</p>
                   <p className="text-sm text-muted-foreground">{n.app} · {n.note}</p>
                 </div>
-                <span className="rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">{n.time}</span>
+                <span className={`rounded-full px-3 py-1 text-xs font-semibold ${n.chip}`}>{n.time}</span>
               </div>
             ))}
           </div>
@@ -249,7 +251,7 @@ function Index() {
           <p className="mt-3 text-lg text-muted-foreground">Beyond shopping — Windface plugs into your work and life tools too.</p>
           <div className="mt-10 flex flex-wrap gap-2">
             {integrations.map((c, i) => (
-              <button key={c.name} onClick={() => setCat(i)} className={`rounded-full px-4 py-2 text-sm font-medium transition ${i === cat ? "bg-primary text-primary-foreground" : "bg-muted text-foreground hover:bg-secondary"}`}>
+              <button key={c.name} onClick={() => setCat(i)} className={`rounded-full px-4 py-2 text-sm font-medium transition ${i === cat ? "bg-babyblue-ink text-primary-foreground" : "bg-muted text-foreground hover:bg-secondary"}`}>
                 {c.name} <span className="opacity-60">{c.apps.length}</span>
               </button>
             ))}
