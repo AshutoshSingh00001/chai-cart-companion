@@ -54,12 +54,12 @@ const nudges = [
 ];
 
 const pillars = [
-  { icon: MessageCircle, title: "Just talk", body: "Ask in English or Hinglish. Windface opens the app, picks the item, and checks out." },
-  { icon: Wallet, title: "UPI & COD", body: "Approve with one tap on UPI, or choose cash on delivery where the site supports it." },
-  { icon: Brain, title: "Knows your taste", body: "Memory remembers your brands, your address, your usual order — and forgets on request." },
-  { icon: Lock, title: "Protected vault", body: "Keep Aadhaar, PAN and tickets encrypted. Windface fills forms only when you allow it." },
-  { icon: SlidersHorizontal, title: "Control centre", body: "See every site login, permission and payment. Revoke anything in a tap." },
-  { icon: Bell, title: "Nudges", body: "Set daily tasks once. Your agent runs them on time, every time." },
+  { icon: MessageCircle, color: "text-primary", title: "Just talk", body: "Ask in English or Hinglish. Windface opens the app, picks the item, and checks out." },
+  { icon: Wallet, color: "text-leaf", title: "UPI & COD", body: "Approve with one tap on UPI, or choose cash on delivery where the site supports it." },
+  { icon: Brain, color: "text-violet", title: "Knows your taste", body: "Memory remembers your brands, your address, your usual order — and forgets on request." },
+  { icon: Lock, color: "text-sky", title: "Protected vault", body: "Keep Aadhaar, PAN and tickets encrypted. Windface fills forms only when you allow it." },
+  { icon: SlidersHorizontal, color: "text-saffron", title: "Control centre", body: "See every site login, permission and payment. Revoke anything in a tap." },
+  { icon: Bell, color: "text-coral", title: "Nudges", body: "Set daily tasks once. Your agent runs them on time, every time." },
 ];
 
 function Composer() {
@@ -119,7 +119,7 @@ function Index() {
       <header className="sticky top-0 z-30 border-b border-border/60 bg-background/70 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a href="/" className="flex items-center gap-2">
-            <img src={windfaceLogo.url} alt="Windface logo" className="h-9 w-9 rounded-xl object-cover" />
+            <img src={windfaceLogo.url} alt="Windface logo" className="h-9 w-9 object-cover" />
             <span className="text-lg font-bold tracking-tight">Windface</span>
           </a>
           <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
@@ -174,7 +174,7 @@ function Index() {
         <div className="mt-14 grid gap-4 md:grid-cols-3">
           {pillars.map((p) => (
             <div key={p.title} className="rounded-3xl border border-border bg-card p-7 transition hover:-translate-y-1">
-              <p.icon className="h-6 w-6 text-primary" />
+              <p.icon className={`h-6 w-6 ${p.color}`} />
               <h3 className="mt-5 text-xl font-bold">{p.title}</h3>
               <p className="mt-2 text-muted-foreground">{p.body}</p>
             </div>
@@ -221,7 +221,7 @@ function Index() {
             </div>
           </div>
           <div className="rounded-3xl border border-border bg-card p-8">
-            <Plug className="h-8 w-8 text-primary" />
+            <Plug className="h-8 w-8 text-violet" />
             <h3 className="mt-6 font-display text-4xl">Control centre</h3>
             <ul className="mt-4 space-y-3 text-sm">
               {["See every site login", "Manage memory & data", "Revoke any permission", "Payment approvals log"].map((x) => (
@@ -232,11 +232,11 @@ function Index() {
         </div>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="flex items-center gap-4 rounded-3xl border border-border bg-card p-6">
-            <Wallet className="h-7 w-7 text-primary" />
+            <Wallet className="h-7 w-7 text-sky" />
             <p><span className="font-semibold">One-click UPI.</span> <span className="text-muted-foreground">Approve from GPay, PhonePe or Paytm.</span></p>
           </div>
           <div className="flex items-center gap-4 rounded-3xl border border-border bg-card p-6">
-            <Truck className="h-7 w-7 text-primary" />
+            <Truck className="h-7 w-7 text-saffron" />
             <p><span className="font-semibold">Cash on delivery.</span> <span className="text-muted-foreground">Supported across multiple Indian sites.</span></p>
           </div>
         </div>
