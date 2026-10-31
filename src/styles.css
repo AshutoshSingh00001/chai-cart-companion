@@ -51,12 +51,15 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --color-saffron: var(--saffron);
-  --color-leaf: var(--leaf);
   --color-blush: var(--blush);
-  --color-sky: var(--sky);
-  --color-violet: var(--violet);
-  --color-coral: var(--coral);
+  --color-mint: var(--mint);
+  --color-mint-ink: var(--mint-ink);
+  --color-lavender: var(--lavender);
+  --color-lavender-ink: var(--lavender-ink);
+  --color-babyblue: var(--babyblue);
+  --color-babyblue-ink: var(--babyblue-ink);
+  --color-peach: var(--peach);
+  --color-peach-ink: var(--peach-ink);
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Instrument Serif", Georgia, serif;
   --color-sidebar: var(--sidebar);
@@ -88,12 +91,16 @@
   --accent: oklch(0.93 0.045 350);
   --accent-foreground: oklch(0.42 0.14 350);
   /* Supporting accents */
-  --saffron: oklch(0.76 0.12 60);
-  --leaf: oklch(0.66 0.1 155);
+  /* Brand pastels: #AAF0D1, #E6E6FA, #89CFF0, #FFE5B4 */
   --blush: oklch(0.9 0.06 350);
-  --sky: oklch(0.7 0.09 235);
-  --violet: oklch(0.66 0.11 305);
-  --coral: oklch(0.72 0.12 30);
+  --mint: oklch(0.929 0.089 164.6);
+  --mint-ink: oklch(0.5 0.1 165);
+  --lavender: oklch(0.918 0.033 296.8);
+  --lavender-ink: oklch(0.52 0.13 295);
+  --babyblue: oklch(0.836 0.083 228.9);
+  --babyblue-ink: oklch(0.52 0.1 235);
+  --peach: oklch(0.929 0.071 84.6);
+  --peach-ink: oklch(0.58 0.12 60);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.91 0.03 350);
@@ -112,7 +119,7 @@
   --sidebar-accent-foreground: oklch(0.4 0.12 350);
   --sidebar-border: oklch(0.91 0.03 350);
   --sidebar-ring: oklch(0.62 0.25 350);
-  --gradient-hero: radial-gradient(55% 45% at 18% 28%, oklch(0.9 0.06 350 / 0.45), transparent 70%), radial-gradient(45% 40% at 85% 22%, oklch(0.88 0.06 235 / 0.35), transparent 70%), radial-gradient(50% 45% at 70% 90%, oklch(0.88 0.07 300 / 0.3), transparent 70%), radial-gradient(55% 45% at 25% 95%, oklch(0.9 0.06 55 / 0.3), transparent 70%);
+  --gradient-hero: radial-gradient(55% 45% at 18% 28%, oklch(0.9 0.06 350 / 0.4), transparent 70%), radial-gradient(45% 40% at 85% 22%, oklch(0.836 0.083 228.9 / 0.45), transparent 70%), radial-gradient(50% 45% at 70% 90%, oklch(0.918 0.033 296.8 / 0.55), transparent 70%), radial-gradient(45% 40% at 22% 92%, oklch(0.929 0.089 164.6 / 0.5), transparent 70%), radial-gradient(40% 35% at 50% 55%, oklch(0.929 0.071 84.6 / 0.35), transparent 70%);
   --shadow-composer: 0 30px 80px -30px oklch(0.62 0.25 350 / 0.4), 0 2px 0 0 oklch(1 0 0 / 0.6) inset;
 }
 
