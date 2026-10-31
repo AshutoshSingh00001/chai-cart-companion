@@ -5,6 +5,7 @@ import {
   ShieldCheck, Wallet, Truck, Clock, Check,
 } from "lucide-react";
 import integrations from "@/data/integrations.json";
+import windfaceLogo from "@/assets/windface-logo.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -118,7 +119,7 @@ function Index() {
       <header className="sticky top-0 z-30 border-b border-border/60 bg-background/70 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a href="/" className="flex items-center gap-2">
-            <span className="grid h-8 w-8 place-items-center rounded-xl bg-primary font-display text-xl text-primary-foreground">W</span>
+            <img src={windfaceLogo.url} alt="Windface logo" className="h-9 w-9 rounded-xl object-cover" />
             <span className="text-lg font-bold tracking-tight">Windface</span>
           </a>
           <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
@@ -134,12 +135,13 @@ function Index() {
       {/* Hero */}
       <section id="start" className="relative overflow-hidden">
         <div className="absolute inset-0 bg-hero" />
-        <div className="relative mx-auto max-w-7xl px-6 pb-24 pt-20 text-center md:pt-28">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-1.5 text-sm backdrop-blur">
+        <div className="relative mx-auto max-w-7xl px-6 pb-24 pt-16 text-center md:pt-24">
+          <img src={windfaceLogo.url} alt="Windface — a face blowing the wind" className="mx-auto h-24 w-24 rounded-3xl object-cover shadow-composer md:h-28 md:w-28" />
+          <span className="mt-8 inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-1.5 text-sm backdrop-blur">
             <span className="h-2 w-2 rounded-full bg-leaf" /> Made for India · UPI & cash on delivery
           </span>
           <h1 className="mx-auto mt-8 max-w-4xl font-display text-6xl leading-[0.95] tracking-tight md:text-8xl">
-            Say it. <em className="text-saffron">Windface</em> gets it done.
+            Say it. <em className="text-primary">Windface</em> gets it done.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
             One AI agent for every Indian app — groceries, trains, cabs, hotels and bills. You talk, it orders, you pay with one tap.
@@ -173,7 +175,7 @@ function Index() {
         <div className="mt-14 grid gap-4 md:grid-cols-3">
           {pillars.map((p) => (
             <div key={p.title} className="rounded-3xl border border-border bg-card p-7 transition hover:-translate-y-1">
-              <p.icon className="h-6 w-6 text-saffron" />
+              <p.icon className="h-6 w-6 text-primary" />
               <h3 className="mt-5 text-xl font-bold">{p.title}</h3>
               <p className="mt-2 text-muted-foreground">{p.body}</p>
             </div>
@@ -199,7 +201,7 @@ function Index() {
                   <p className="font-semibold">{n.title}</p>
                   <p className="text-sm opacity-60">{n.app} · {n.note}</p>
                 </div>
-                <span className="rounded-full bg-saffron px-3 py-1 text-xs font-semibold text-primary">{n.time}</span>
+                <span className="rounded-full bg-primary-foreground px-3 py-1 text-xs font-semibold text-primary">{n.time}</span>
               </div>
             ))}
           </div>
@@ -220,7 +222,7 @@ function Index() {
             </div>
           </div>
           <div className="rounded-3xl border border-border bg-card p-8">
-            <Plug className="h-8 w-8 text-saffron" />
+            <Plug className="h-8 w-8 text-primary" />
             <h3 className="mt-6 font-display text-4xl">Control centre</h3>
             <ul className="mt-4 space-y-3 text-sm">
               {["See every site login", "Manage memory & data", "Revoke any permission", "Payment approvals log"].map((x) => (
@@ -231,11 +233,11 @@ function Index() {
         </div>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="flex items-center gap-4 rounded-3xl border border-border bg-card p-6">
-            <Wallet className="h-7 w-7 text-saffron" />
+            <Wallet className="h-7 w-7 text-primary" />
             <p><span className="font-semibold">One-click UPI.</span> <span className="text-muted-foreground">Approve from GPay, PhonePe or Paytm.</span></p>
           </div>
           <div className="flex items-center gap-4 rounded-3xl border border-border bg-card p-6">
-            <Truck className="h-7 w-7 text-saffron" />
+            <Truck className="h-7 w-7 text-primary" />
             <p><span className="font-semibold">Cash on delivery.</span> <span className="text-muted-foreground">Supported across multiple Indian sites.</span></p>
           </div>
         </div>
