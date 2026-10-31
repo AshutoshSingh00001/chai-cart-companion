@@ -254,7 +254,7 @@ function Index() {
             ))}
           </div>
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {integrations[cat].apps.map((a) => (
+            {(integrations[cat]?.apps ?? []).map((a) => (
               <div key={a.slug} className="flex gap-4 rounded-2xl border border-border bg-background p-5">
                 <Logo domain={a.domain} name={a.name} size="h-10 w-10" />
                 <div>
