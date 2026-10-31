@@ -119,7 +119,7 @@ function Index() {
       <header className="sticky top-0 z-30 border-b border-border/60 bg-background/70 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a href="/" className="flex items-center gap-2">
-            <img src={windfaceLogo.url} alt="Windface logo" className="h-9 w-9 object-cover" />
+            <img src={windfaceLogo.url} alt="Windface logo" className="h-9 w-9 rounded-xl object-cover" />
             <span className="text-lg font-bold tracking-tight">Windface</span>
           </a>
           <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
