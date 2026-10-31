@@ -135,9 +135,8 @@ function Index() {
       {/* Hero */}
       <section id="start" className="relative overflow-hidden">
         <div className="absolute inset-0 bg-hero" />
-        <div className="relative mx-auto max-w-7xl px-6 pb-24 pt-16 text-center md:pt-24">
-          <img src={windfaceLogo.url} alt="Windface — a face blowing the wind" className="mx-auto h-24 w-24 rounded-3xl object-cover shadow-composer md:h-28 md:w-28" />
-          <span className="mt-8 inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-1.5 text-sm backdrop-blur">
+        <div className="relative mx-auto max-w-7xl px-6 pb-24 pt-20 text-center md:pt-28">
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-1.5 text-sm backdrop-blur">
             <span className="h-2 w-2 rounded-full bg-leaf" /> Made for India · UPI & cash on delivery
           </span>
           <h1 className="mx-auto mt-8 max-w-4xl font-display text-6xl leading-[0.95] tracking-tight md:text-8xl">
@@ -184,24 +183,24 @@ function Index() {
       </section>
 
       {/* Nudges */}
-      <section id="nudges" className="bg-primary py-24 text-primary-foreground">
+      <section id="nudges" className="border-y border-border bg-blush py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 md:grid-cols-2">
           <div>
-            <span className="inline-flex items-center gap-2 text-sm uppercase tracking-widest opacity-70"><Clock className="h-4 w-4" /> Nudges</span>
+            <span className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-muted-foreground"><Clock className="h-4 w-4" /> Nudges</span>
             <h2 className="mt-4 font-display text-5xl leading-tight md:text-6xl">Set it once. It happens every day.</h2>
-            <p className="mt-6 max-w-md text-lg opacity-75">
+            <p className="mt-6 max-w-md text-lg text-muted-foreground">
               Milk from Blinkit at 8 AM. Pizza from Domino's every Friday. Your recharge on the 1st. Windface runs your routine and asks only for a UPI tap.
             </p>
           </div>
           <div className="space-y-3">
             {nudges.map((n) => (
-              <div key={n.title} className="flex items-center gap-4 rounded-2xl bg-primary-foreground/10 p-4">
-                <div className="rounded-xl bg-primary-foreground p-2"><Logo domain={n.domain} name={n.app} /></div>
+              <div key={n.title} className="flex items-center gap-4 rounded-2xl border border-border bg-card p-4">
+                <div className="rounded-xl bg-background p-2"><Logo domain={n.domain} name={n.app} /></div>
                 <div className="flex-1">
                   <p className="font-semibold">{n.title}</p>
-                  <p className="text-sm opacity-60">{n.app} · {n.note}</p>
+                  <p className="text-sm text-muted-foreground">{n.app} · {n.note}</p>
                 </div>
-                <span className="rounded-full bg-primary-foreground px-3 py-1 text-xs font-semibold text-primary">{n.time}</span>
+                <span className="rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">{n.time}</span>
               </div>
             ))}
           </div>
