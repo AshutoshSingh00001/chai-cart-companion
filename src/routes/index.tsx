@@ -39,6 +39,8 @@ const indianApps = [
   { name: "Swiggy", domain: "swiggy.com" },
 ];
 
+const appWashes = ["bg-blush/70", "bg-mint/60", "bg-lavender/70", "bg-babyblue/50", "bg-peach/60"];
+
 const suggestions = [
   "Order 2L Amul milk on Blinkit",
   "Book Tatkal to Lucknow on ConfirmTkt",
@@ -154,14 +156,27 @@ function Index() {
       </section>
 
       {/* Marquee */}
-      <section id="apps" className="border-y border-border bg-card py-10">
-        <p className="mb-6 text-center text-sm font-medium uppercase tracking-widest text-muted-foreground">Works on the apps you already use</p>
-        <div className="overflow-hidden">
-          <div className="marquee flex w-max gap-4">
-            {[...indianApps, ...indianApps].map((a, i) => (
-              <div key={i} className="wave flex items-center gap-3 rounded-2xl border border-border bg-background px-5 py-3" style={{ animationDelay: `${(i % indianApps.length) * 0.2}s` }}>
-                <Logo domain={a.domain} name={a.name} />
-                <span className="font-semibold">{a.name}</span>
+      <section id="apps" className="relative overflow-hidden border-y border-border bg-card py-20">
+        <div className="absolute inset-0 bg-hero opacity-60" />
+        <div className="relative">
+          <h2 className="text-center font-display text-4xl md:text-5xl">Works on the apps you already use</h2>
+          <p className="mt-3 text-center text-muted-foreground">From morning milk to midnight pizza — one agent, all your apps.</p>
+          <div className="fade-x mt-12 space-y-5 overflow-hidden py-3">
+            {[
+              { row: indianApps, anim: "marquee" },
+              { row: [...indianApps].reverse(), anim: "marquee-rev" },
+            ].map(({ row, anim }, r) => (
+              <div key={r} className={`${anim} flex w-max gap-5`}>
+                {[...row, ...row].map((a, i) => (
+                  <div
+                    key={i}
+                    className={`wave flex items-center gap-3.5 rounded-3xl px-7 py-4 shadow-sm transition hover:scale-105 hover:shadow-lg ${appWashes[i % appWashes.length]}`}
+                    style={{ animationDelay: `${(i % row.length) * 0.2}s` }}
+                  >
+                    <Logo domain={a.domain} name={a.name} size="h-10 w-10" />
+                    <span className="text-lg font-semibold">{a.name}</span>
+                  </div>
+                ))}
               </div>
             ))}
           </div>
