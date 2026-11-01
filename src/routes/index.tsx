@@ -54,12 +54,12 @@ const nudges = [
 ];
 
 const pillars = [
-  { icon: MessageCircle, tile: "bg-blush", color: "text-primary", title: "Just talk", body: "Ask in English or Hinglish. Windface opens the app, picks the item, and checks out." },
-  { icon: Wallet, tile: "bg-mint", color: "text-mint-ink", title: "UPI & COD", body: "Approve with one tap on UPI, or choose cash on delivery where the site supports it." },
-  { icon: Brain, tile: "bg-lavender", color: "text-lavender-ink", title: "Knows your taste", body: "Memory remembers your brands, your address, your usual order — and forgets on request." },
-  { icon: Lock, tile: "bg-babyblue", color: "text-babyblue-ink", title: "Protected vault", body: "Keep Aadhaar, PAN and tickets encrypted. Windface fills forms only when you allow it." },
-  { icon: SlidersHorizontal, tile: "bg-peach", color: "text-peach-ink", title: "Control centre", body: "See every site login, permission and payment. Revoke anything in a tap." },
-  { icon: Bell, tile: "bg-mint", color: "text-mint-ink", title: "Nudges", body: "Set daily tasks once. Your agent runs them on time, every time." },
+  { icon: MessageCircle, wash: "bg-blush/60", color: "text-primary", title: "Just talk", body: "Ask in English or Hinglish. Windface opens the app, picks the item, and checks out." },
+  { icon: Wallet, wash: "bg-mint/60", color: "text-mint-ink", title: "UPI & COD", body: "Approve with one tap on UPI, or choose cash on delivery where the site supports it." },
+  { icon: Brain, wash: "bg-lavender/70", color: "text-lavender-ink", title: "Knows your taste", body: "Memory remembers your brands, your address, your usual order — and forgets on request." },
+  { icon: Lock, wash: "bg-babyblue/50", color: "text-babyblue-ink", title: "Protected vault", body: "Keep Aadhaar, PAN and tickets encrypted. Windface fills forms only when you allow it." },
+  { icon: SlidersHorizontal, wash: "bg-peach/60", color: "text-peach-ink", title: "Control centre", body: "See every site login, permission and payment. Revoke anything in a tap." },
+  { icon: Bell, wash: "bg-lavender/70", color: "text-lavender-ink", title: "Nudges", body: "Set daily tasks once. Your agent runs them on time, every time." },
 ];
 
 function Composer() {
@@ -173,12 +173,15 @@ function Index() {
         <h2 className="max-w-3xl font-display text-5xl leading-tight md:text-6xl">
           A friend who knows you <em className="text-muted-foreground">— and your taste.</em>
         </h2>
-        <div className="mt-14 grid gap-4 md:grid-cols-3">
-          {pillars.map((p) => (
-            <div key={p.title} className="rounded-3xl border border-border bg-card p-7 transition hover:-translate-y-1">
-              <span className={`grid h-11 w-11 place-items-center rounded-2xl ${p.tile}`}><p.icon className={`h-5 w-5 ${p.color}`} /></span>
-              <h3 className="mt-5 text-xl font-bold">{p.title}</h3>
-              <p className="mt-2 text-muted-foreground">{p.body}</p>
+        <div className="mt-14 grid gap-5 md:grid-cols-3">
+          {pillars.map((p, i) => (
+            <div key={p.title} className={`group relative overflow-hidden rounded-3xl p-8 transition duration-300 hover:-translate-y-1.5 hover:shadow-xl ${p.wash}`}>
+              <span className="pointer-events-none absolute -right-2 -top-6 font-display text-8xl text-foreground/10 transition group-hover:text-foreground/20">{String(i + 1).padStart(2, "0")}</span>
+              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-card shadow-sm">
+                <p.icon className={`h-6 w-6 ${p.color}`} />
+              </span>
+              <h3 className="mt-6 text-xl font-bold">{p.title}</h3>
+              <p className="mt-2 text-foreground/70">{p.body}</p>
             </div>
           ))}
         </div>
