@@ -39,6 +39,8 @@ const indianApps = [
   { name: "Swiggy", domain: "swiggy.com" },
 ];
 
+const appWashes = ["bg-blush/70", "bg-mint/60", "bg-lavender/70", "bg-babyblue/50", "bg-peach/60"];
+
 const suggestions = [
   "Order 2L Amul milk on Blinkit",
   "Book Tatkal to Lucknow on ConfirmTkt",
@@ -54,12 +56,12 @@ const nudges = [
 ];
 
 const pillars = [
-  { icon: MessageCircle, wash: "bg-blush/60", color: "text-primary", title: "Just talk", body: "Ask in English or Hinglish. Windface opens the app, picks the item, and checks out." },
-  { icon: Wallet, wash: "bg-mint/60", color: "text-mint-ink", title: "UPI & COD", body: "Approve with one tap on UPI, or choose cash on delivery where the site supports it." },
-  { icon: Brain, wash: "bg-lavender/70", color: "text-lavender-ink", title: "Knows your taste", body: "Memory remembers your brands, your address, your usual order — and forgets on request." },
-  { icon: Lock, wash: "bg-babyblue/50", color: "text-babyblue-ink", title: "Protected vault", body: "Keep Aadhaar, PAN and tickets encrypted. Windface fills forms only when you allow it." },
-  { icon: SlidersHorizontal, wash: "bg-peach/60", color: "text-peach-ink", title: "Control centre", body: "See every site login, permission and payment. Revoke anything in a tap." },
-  { icon: Bell, wash: "bg-lavender/70", color: "text-lavender-ink", title: "Nudges", body: "Set daily tasks once. Your agent runs them on time, every time." },
+  { icon: MessageCircle, wash: "bg-blush/60", tile: "bg-blush", color: "text-primary", title: "Just talk", body: "Ask in English or Hinglish. Windface opens the app, picks the item, and checks out." },
+  { icon: Wallet, wash: "bg-mint/60", tile: "bg-mint", color: "text-mint-ink", title: "UPI & COD", body: "Approve with one tap on UPI, or choose cash on delivery where the site supports it." },
+  { icon: Brain, wash: "bg-lavender/70", tile: "bg-lavender", color: "text-lavender-ink", title: "Knows your taste", body: "Memory remembers your brands, your address, your usual order — and forgets on request." },
+  { icon: Lock, wash: "bg-babyblue/50", tile: "bg-babyblue", color: "text-babyblue-ink", title: "Protected vault", body: "Keep Aadhaar, PAN and tickets encrypted. Windface fills forms only when you allow it." },
+  { icon: SlidersHorizontal, wash: "bg-peach/60", tile: "bg-peach", color: "text-peach-ink", title: "Control centre", body: "See every site login, permission and payment. Revoke anything in a tap." },
+  { icon: Bell, wash: "bg-lavender/70", tile: "bg-lavender", color: "text-lavender-ink", title: "Nudges", body: "Set daily tasks once. Your agent runs them on time, every time." },
 ];
 
 function Composer() {
@@ -154,14 +156,27 @@ function Index() {
       </section>
 
       {/* Marquee */}
-      <section id="apps" className="border-y border-border bg-card py-10">
-        <p className="mb-6 text-center text-sm font-medium uppercase tracking-widest text-muted-foreground">Works on the apps you already use</p>
-        <div className="overflow-hidden">
-          <div className="marquee flex w-max gap-4">
-            {[...indianApps, ...indianApps].map((a, i) => (
-              <div key={i} className="flex items-center gap-3 rounded-2xl border border-border bg-background px-5 py-3">
-                <Logo domain={a.domain} name={a.name} />
-                <span className="font-semibold">{a.name}</span>
+      <section id="apps" className="relative overflow-hidden border-y border-border bg-card py-20">
+        <div className="absolute inset-0 bg-hero opacity-60" />
+        <div className="relative">
+          <h2 className="text-center font-display text-4xl md:text-5xl">Works on the apps you already use</h2>
+          <p className="mt-3 text-center text-muted-foreground">From morning milk to midnight pizza — one agent, all your apps.</p>
+          <div className="fade-x mt-12 space-y-5 overflow-hidden py-3">
+            {[
+              { row: indianApps, anim: "marquee" },
+              { row: [...indianApps].reverse(), anim: "marquee-rev" },
+            ].map(({ row, anim }, r) => (
+              <div key={r} className={`${anim} flex w-max gap-5`}>
+                {[...row, ...row].map((a, i) => (
+                  <div
+                    key={i}
+                    className={`wave flex items-center gap-3.5 rounded-3xl px-7 py-4 shadow-sm transition hover:scale-105 hover:shadow-lg ${appWashes[i % appWashes.length]}`}
+                    style={{ animationDelay: `${(i % row.length) * 0.2}s` }}
+                  >
+                    <Logo domain={a.domain} name={a.name} size="h-10 w-10" />
+                    <span className="text-lg font-semibold">{a.name}</span>
+                  </div>
+                ))}
               </div>
             ))}
           </div>
@@ -174,11 +189,10 @@ function Index() {
           A friend who knows you <em className="text-muted-foreground">— and your taste.</em>
         </h2>
         <div className="mt-14 grid gap-5 md:grid-cols-3">
-          {pillars.map((p, i) => (
-            <div key={p.title} className={`group relative overflow-hidden rounded-3xl p-8 transition duration-300 hover:-translate-y-1.5 hover:shadow-xl ${p.wash}`}>
-              <span className="pointer-events-none absolute -right-2 -top-6 font-display text-8xl text-foreground/10 transition group-hover:text-foreground/20">{String(i + 1).padStart(2, "0")}</span>
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-card shadow-sm">
-                <p.icon className={`h-6 w-6 ${p.color}`} />
+          {pillars.map((p) => (
+            <div key={p.title} className={`rounded-3xl p-8 transition duration-300 hover:-translate-y-1.5 hover:shadow-xl ${p.wash}`}>
+              <span className={`grid h-12 w-12 place-items-center rounded-full shadow-sm ${p.tile}`}>
+                <p.icon className={`h-6 w-6 ${p.color}`} strokeWidth={2.2} />
               </span>
               <h3 className="mt-6 text-xl font-bold">{p.title}</h3>
               <p className="mt-2 text-foreground/70">{p.body}</p>
