@@ -138,3 +138,5 @@
 @utility shadow-composer { box-shadow: var(--shadow-composer); }
 @utility marquee { animation: marquee 40s linear infinite; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@utility wave { animation: wave 2.6s ease-in-out infinite; }
+@keyframes wave { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }

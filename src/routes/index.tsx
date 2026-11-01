@@ -159,7 +159,7 @@ function Index() {
         <div className="overflow-hidden">
           <div className="marquee flex w-max gap-4">
             {[...indianApps, ...indianApps].map((a, i) => (
-              <div key={i} className="flex items-center gap-3 rounded-2xl border border-border bg-background px-5 py-3">
+              <div key={i} className="wave flex items-center gap-3 rounded-2xl border border-border bg-background px-5 py-3" style={{ animationDelay: `${(i % indianApps.length) * 0.2}s` }}>
                 <Logo domain={a.domain} name={a.name} />
                 <span className="font-semibold">{a.name}</span>
               </div>
