@@ -1,3 +1,4 @@
 # Roadmap
 
-- [x] Redesign the "A friend who knows you" pillars section — pastel-tinted cards with white icon tiles, large faded numbers and hover lift
+- [x] Redesign the "A friend who knows you" pillars section — pastel-tinted cards, solid pastel icon circles, no numbers
+- [ ] Add a cool wave motion effect to the "Works on the apps you already use" logos strip
